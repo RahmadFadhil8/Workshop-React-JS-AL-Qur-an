@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import type { Surah } from "../../types/surah";
 import Number from "../Number";
 
@@ -7,15 +8,19 @@ type SurahCardProps ={
 
 function SurahCard({surah}: SurahCardProps) {
     return (
-        <div className="bg-dark p-2">
-            <Number nomor={surah.nomor}/>
-            <div>
-                <p>{surah.namaLatin}</p>
-                <p>{surah.arti}</p>
-                <p>{surah.tempatTurun} . {surah.jumlahAyat}</p>
+        <Link to={`/surah/${surah.nomor}`}>
+            <div className="bg-dark p-4 rounded-lg flex justify-between gap-3">
+                <div className="flex text-left gap-3">
+                    <Number nomor={surah.nomor}/>
+                    <div className="text-light">
+                        <p className="font-bold text-base">{surah.namaLatin}</p>
+                        <p className="text-subtle">{surah.arti}</p>
+                        <p className="text-subtle">{surah.tempatTurun} . {surah.jumlahAyat} Ayat</p>
+                    </div>
+                </div>
+                <p className="font-bold text-2xl">{surah.nama}</p>
             </div>
-            <p>{surah.nama}</p>
-        </div>
+        </Link>
     )
 }
 
