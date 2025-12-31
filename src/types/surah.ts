@@ -6,6 +6,11 @@ type Ayat = {
   audio: Record<string, string>;
 };
 
+type Tafsiran = {
+  nomorTafsir: number;
+  teksTafsir : string;
+};
+
 type RelatedSurah = {
   nomor: number;
   namaLatin: string;
@@ -25,4 +30,18 @@ type Surah = {
   nextSurah: RelatedSurah | null;
 };
 
-export type { Ayat, Surah, RelatedSurah };
+type Tafsir = {
+  nomor: number;
+  nama: string;
+  namaLatin: string;
+  jumlahAyat: number;
+  tempatTurun: string;
+  arti: string;
+  deskripsi: string;
+  audioFull: Record<string, string>;
+  tafsir: Tafsiran[];
+  prevSurah: RelatedSurah | null;
+  nextSurah: RelatedSurah | null;
+};
+
+export type { Ayat, Surah, RelatedSurah, Tafsir, Tafsiran };

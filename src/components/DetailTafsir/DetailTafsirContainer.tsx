@@ -1,0 +1,1 @@
+// catatan kecil  = https://equran.id/api/v2/tafsir/${surahId}

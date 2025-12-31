@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom"
-import DetailSurahContainer from "../components/DetailSurah/DetailSurahContainer"
 
-function DetailSurahPage () {
+function DetailTafsirPage () {
     return (
         <>
             <div className="pt-8">
                 <Link to="/" className="text-light">
-                    ← Daftar Surah
+                    ← Detail Surah
                 </Link>
             </div>
-            <DetailSurahContainer />
+            {/* <DetailSurahContainer /> */}
         </>
     )
 }
 
-export default DetailSurahPage
+export default DetailTafsirPage
