@@ -7,8 +7,8 @@ type Ayat = {
 };
 
 type Tafsiran = {
-  nomorTafsir: number;
-  teksTafsir : string;
+  ayat: number;
+  teks : string;
 };
 
 type RelatedSurah = {

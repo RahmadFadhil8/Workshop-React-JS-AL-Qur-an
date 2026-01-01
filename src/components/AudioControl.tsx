@@ -1,8 +1,6 @@
 import Play from "../assets/Play.svg";
 import Pause from "../assets/Pause.svg";
 
-
-
 type AudioControlProps = {
     currentReciter: string;
     audioPlaying: boolean;

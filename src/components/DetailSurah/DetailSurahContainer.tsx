@@ -74,15 +74,15 @@ function DetailSurahContainer() {
     }
 
     if (loading) {
-    return <div className="p-5 text-center">Memuat...</div>;
+        return <div className="p-5 text-center">Memuat...</div>;
     }
 
     if (msgError || !surah) {
-    return (
-        <div className="p-5 text-center text-red-500">
-            Error: {msgError || "Surah tidak ditemukan"}
-        </div>
-    );
+        return (
+            <div className="p-5 text-center text-red-500">
+                Error: {msgError || "Surah tidak ditemukan"}
+            </div>
+        );
     }
 
     return (
